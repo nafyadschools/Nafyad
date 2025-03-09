@@ -1,82 +1,88 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    color: #fff;
-    overflow-x: hidden;
-  }
-  .round-image {
-    width: 90px; /* Set desired width */
-    height: 97px; /* Set desired height */
-    border-radius: 50%;
-    object-fit: cover; /* Ensures the image fits within the circle */
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  overflow-x: hidden;
+  text-align: center;
 }
 
-  .glass-effect .logo h1{
-        text-align: center;
+.round-image {
+  width: 90px; /* Set desired width */
+  height: 97px; /* Set desired height */
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image fits within the circle */
 }
 
-  header, footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-  }
-  
-  a {
-    color: #0ff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    color: #fff;
-  }
-  
-  /* Futuristic Glass Effect */
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1rem;
-    margin: 1rem 2rem;
-  }
-  
-  /* Gradient Background */
-  .gradient-bg {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  /* Hero Section */
-  #hero h2 {
-    font-size: 3rem;
-    animation: glow 2s infinite alternate;
-  }
-  
-  @keyframes glow {
-    from {
+.glass-effect .logo h1{
+  text-align: center;
+}
+
+header, footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* Futuristic Glass Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  margin: 1rem 2rem;
+}
+
+/* Gradient Background */
+.gradient-bg {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Hero Section */
+#hero h2 {
+  font-size: 3rem;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
       text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-    }
-    to {
-      text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
-    }
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    header, footer {
+  to {
+      text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header, footer {
       flex-direction: column;
       text-align: center;
-    }
-  
-    #hero h2 {
-      font-size: 2rem;
-    }
   }
-  
+
+  #hero h2 {
+      font-size: 2rem;
+  }
+}

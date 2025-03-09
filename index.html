@@ -6,15 +6,55 @@
   <title>Nafyad School</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <style>
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+      }
+      50% {
+        text-shadow: 0 0 15px #0ff, 0 0 25px #0ff, 0 0 35px #0ff;
+        transform: scale(1.05);
+      }
+      100% {
+        text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+      }
+    }
+    h1 {
+      animation: glow 2s infinite alternate ease-in-out;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #0ff;
+    }
+    body, header, main, footer, h2, h3 {
+      text-align: left;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    .nav-container ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 20px;
+    }
+    .nav-container ul li {
+      display: inline;
+    }
+  </style>
 </head>
 <body>
   <header class="glass-effect">
     <div class="header-container">
-      <div class="logo">
-       
-      </div>
+      <div class="logo"></div>
       <h1 class="center-text">NAFYAD SCHOOL</h1>
-      <nav>
+      <nav class="nav-container">
         <ul>
           <li><a href="#about">About Us</a></li>
           <li><a href="#admissions">Admissions</a></li>
@@ -25,20 +65,28 @@
   </header>
 
   <main>
-    <section id="hero" class="gradient-bg">
-      <h2>Welcome to the Future of Education</h2>
-      <p>Empowering students to lead the way into tomorrow.</p>
-    </section>
-
-    <section id="about" class="glass-effect">
+    <div id="about" class="glass-effect">
       <h2>About Us</h2>
       <p>Explore our rich history and our vision for the future.</p>
-    </section>
+    </div>
 
-    <section id="news" class="glass-effect">
+    <div id="mission-vision" class="glass-effect">
+      <h3>Our Mission</h3>
+      <p>To provide high-quality education that nurtures creativity, innovation, and excellence in students.</p>
+      
+      <h3>Our Vision</h3>
+      <p>To be a leading institution that shapes the future by inspiring students to achieve their full potential.</p>
+    </div>
+
+    <div id="history" class="glass-effect">
+      <h3>Our History</h3>
+      <p>Founded in [YEAR], Nafyad School has been dedicated to academic excellence, fostering a culture of learning and success.</p>
+    </div>
+
+    <div id="news" class="glass-effect">
       <h2>Latest News</h2>
       <p>Stay updated with the latest events and announcements.</p>
-    </section>
+    </div>
   </main>
 
   <footer class="gradient-bg">

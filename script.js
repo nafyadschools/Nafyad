@@ -52,12 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  // Dynamic greeting based on time of day
+  // Dynamic greeting based on time of day (responsive for mobile)
   const greeting = document.createElement('div');
   greeting.style.cssText = `
       position: absolute;
-      top: 50px; /* Moved lower */
-      right: 50px; /* Moved slightly to the left */
+      top: 50px;
+      right: 50px;
       font-size: 1.2rem;
       color: #0ff;
   `;
@@ -71,6 +71,26 @@ document.addEventListener('DOMContentLoaded', () => {
       greeting.textContent = 'Good Evening, Welcome to Nafyad School!';
   }
   document.body.appendChild(greeting);
+
+  // Make greeting responsive
+  const mediaQuery = window.matchMedia('(max-width: 768px)');
+  function handleScreenSize(e) {
+      if (e.matches) {
+          greeting.style.position = 'relative';
+          greeting.style.top = 'auto';
+          greeting.style.right = 'auto';
+          greeting.style.textAlign = 'center';
+          greeting.style.display = 'block';
+          greeting.style.marginTop = '10px';
+      } else {
+          greeting.style.position = 'absolute';
+          greeting.style.top = '50px';
+          greeting.style.right = '50px';
+      }
+  }
+  
+  mediaQuery.addListener(handleScreenSize);
+  handleScreenSize(mediaQuery);
 
   // Interactive hover effect for sections (reduced glow)
   document.querySelectorAll('.glass-effect').forEach(section => {

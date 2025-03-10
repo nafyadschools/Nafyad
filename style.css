@@ -6,83 +6,122 @@ body {
   background: linear-gradient(135deg, #1a1a2e, #16213e);
   color: #fff;
   overflow-x: hidden;
+}
+
+/* Center only the heading */
+h1 {
   text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #0ff;
+  animation: glow 2s infinite alternate ease-in-out;
 }
 
-.round-image {
-  width: 90px; /* Set desired width */
-  height: 97px; /* Set desired height */
-  border-radius: 50%;
-  object-fit: cover; /* Ensures the image fits within the circle */
+/* Futuristic Glow Animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  }
+  50% {
+    text-shadow: 0 0 15px #0ff, 0 0 25px #0ff, 0 0 35px #0ff;
+    transform: scale(1.05);
+  }
+  100% {
+    text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+  }
 }
 
-.glass-effect .logo h1{
+/* Navigation Menu Styling */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+nav a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+  color: #fff;
+  transform: scale(1.1);
+  border-bottom: 2px solid #0ff;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* Glass Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  margin: 1rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-effect:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.4);
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #0ff, #00d4ff);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #00d4ff, #0ff);
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  padding: 2rem;
   text-align: center;
-}
-
-header, footer {
+  border-top: 2px solid #0ff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
-}
-
-h1, h2, h3 {
-  text-align: center;
-}
-
-a {
-  color: #0ff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #fff;
-}
-
-/* Futuristic Glass Effect */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1rem;
-  margin: 1rem 2rem;
-}
-
-/* Gradient Background */
-.gradient-bg {
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  padding: 2rem;
-  text-align: center;
-}
-
-/* Hero Section */
-#hero h2 {
-  font-size: 3rem;
-  animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-  from {
-      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-  }
-  to {
-      text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+  a {
+    color: goldenrod;
   }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  header, footer {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  #hero h2 {
-      font-size: 2rem;
-  }
-}

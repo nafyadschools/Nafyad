@@ -54,11 +54,12 @@ ul {
 }
 
 /* Header Styles */
-.header {
+header {
   background: var(--dark-bg);
   color: var(--white);
   padding: 1.5rem 0;
 }
+
 .branding {
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -66,8 +67,6 @@ ul {
 
 .branding:active {
   transform: scale(0.98);
-}
-
 .branding h1 {
   font-size: 1.75rem;
 }
